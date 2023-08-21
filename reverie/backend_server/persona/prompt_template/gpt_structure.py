@@ -72,8 +72,10 @@ def ChatGPT_request(prompt):
   try: 
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo", 
-    messages=[{"role": "user", "content": prompt}]
+    messages=[{"role": "user", "content": "### User: " + prompt + "\n### Assistant:"}],
+    temperature = 0.01
     )
+    print(completion["choices"])
     return completion["choices"][0]["message"]["content"]
   
   except: 
@@ -88,7 +90,7 @@ def GPT4_safe_generate_response(prompt,
                                    fail_safe_response="error",
                                    func_validate=None,
                                    func_clean_up=None,
-                                   verbose=False): 
+                                   verbose=True): 
   prompt = 'GPT-3 Prompt:\n"""\n' + prompt + '\n"""\n'
   prompt += f"Output the response to the prompt above in json. {special_instruction}\n"
   prompt += "Example output json:\n"
@@ -129,7 +131,7 @@ def ChatGPT_safe_generate_response(prompt,
                                    func_clean_up=None,
                                    verbose=False): 
   # prompt = 'GPT-3 Prompt:\n"""\n' + prompt + '\n"""\n'
-  prompt = '"""\n' + prompt + '\n"""\n'
+  prompt = '\n"""\n' + prompt + '\n"""\n'
   prompt += f"Output the response to the prompt above in json. {special_instruction}\n"
   prompt += "Example output json:\n"
   prompt += '{"output": "' + str(example_output) + '"}'
@@ -139,15 +141,26 @@ def ChatGPT_safe_generate_response(prompt,
     print (prompt)
 
   for i in range(repeat): 
-
     try: 
-      curr_gpt_response = ChatGPT_request(prompt).strip()
+      curr_reps = ChatGPT_request(prompt)
+      curr_gpt_response = curr_reps.strip()
+      print(f"P0curr_gpt_reps: {curr_reps}\n")
       end_index = curr_gpt_response.rfind('}') + 1
+      # print(f"end_index: {end_index}\n")
       curr_gpt_response = curr_gpt_response[:end_index]
+      curr_split = curr_gpt_response.split()
+      
+      print(f"P1curr_gpt_resp: {curr_gpt_response}\n")
+      #if (len(curr_split_len) - 1) > 1:
+        #curr_gpt_response = curr_split[len(curr_split_len)]
+        
+      #print(f"P2curr_gpt_resp: {curr_gpt_response}\n")
+      
+      # print(f"P2curr_gpt_response: {curr_gpt_response}\n")
       curr_gpt_response = json.loads(curr_gpt_response)["output"]
-
+      #print(f"P3curr_gpt_resp: {curr_gpt_response}\n")
       # print ("---ashdfaf")
-      # print (curr_gpt_response)
+      # print(curr_gpt_response)
       # print ("000asdfhia")
       
       if func_validate(curr_gpt_response, prompt=prompt): 
@@ -158,9 +171,9 @@ def ChatGPT_safe_generate_response(prompt,
         print (curr_gpt_response)
         print ("~~~~")
 
-    except: 
+    except:
       pass
-
+    
   return False
 
 
@@ -209,7 +222,7 @@ def GPT_request(prompt, gpt_parameter):
   temp_sleep()
   try: 
     response = openai.Completion.create(
-                model=gpt_parameter["engine"],
+                model="gpt-3.5-turbo",
                 prompt=prompt,
                 temperature=gpt_parameter["temperature"],
                 max_tokens=gpt_parameter["max_tokens"],
@@ -218,6 +231,7 @@ def GPT_request(prompt, gpt_parameter):
                 presence_penalty=gpt_parameter["presence_penalty"],
                 stream=gpt_parameter["stream"],
                 stop=gpt_parameter["stop"],)
+    print(f"Response: {response.choices}")
     return response.choices[0].text
   except: 
     print ("TOKEN LIMIT EXCEEDED")
