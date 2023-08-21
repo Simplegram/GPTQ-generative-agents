@@ -6,6 +6,8 @@
 This generative agents repo uses [Oobabooga Text Generation WebUI](https://github.com/oobabooga/text-generation-webui) along with the built-in OpenAI extension.
 I used [TheBloke/upstage-llama-30b-instruct-2048-GPTQ](https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GPTQ) by TheBloke from HuggingFace, which from my personal testing and the Open LLM Leaderboard, the best instruction following model that I can run with an RTX 4090. I managed to run 10 hours (4 hours excluding sleeping time) of simulation time. 
 
+Most of the code changes are adding extra prompts to the special instruction parameter like ```Strictly follow the JSON format specified``` and adjusting the prompt instruction to fit upstage-llama-30b to something like ```"### User:\n" + prompt + "\n### Assistant:"```
+
 ## Current Roadblock
 The code currently fails on running ```run_gpt_prompt_insight_and_guidance``` function in ```\generative_agents\reverie\backend_server\persona\prompt_template\run_gpt_prompt.py``` file.
 
