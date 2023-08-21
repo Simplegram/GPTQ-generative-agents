@@ -2,7 +2,7 @@
 
 # Generative Agents: Interactive Simulacra of Human Behavior, powered by Oobabooga Text Generation WebUI with OpenAI extension 
 
-## The repo contains messy and buggy codes. I'm not in any way a capable Python coder, I'm just a noob trying to "duct tape" the codes to be used with local GPTQ models. Any help fixing the bugs is very much appreciated.
+## The repo contains messy and buggy codes. I'm not in any way a capable Python coder, I'm just a noob trying to "duct tape" the codes so it can be used with local GPTQ models. Any help fixing the bugs is very much appreciated.
 This generative agents repo uses [Oobabooga Text Generation WebUI](https://github.com/oobabooga/text-generation-webui) along with the built-in OpenAI extension.
 I used [TheBloke/upstage-llama-30b-instruct-2048-GPTQ](https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GPTQ) by TheBloke from HuggingFace, which from my personal testing and the Open LLM Leaderboard, the best instruction following model that I can run with an RTX 4090. I managed to run 10 hours (4 hours excluding sleeping time) of simulation time. 
 
