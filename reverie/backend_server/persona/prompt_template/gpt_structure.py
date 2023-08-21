@@ -131,7 +131,7 @@ def ChatGPT_safe_generate_response(prompt,
                                    func_clean_up=None,
                                    verbose=False): 
   # prompt = 'GPT-3 Prompt:\n"""\n' + prompt + '\n"""\n'
-  prompt = '\n"""\n' + prompt + '\n"""\n'
+  prompt = '"""\n' + prompt + '\n"""\n'
   prompt += f"Output the response to the prompt above in json. {special_instruction}\n"
   prompt += "Example output json:\n"
   prompt += '{"output": "' + str(example_output) + '"}'

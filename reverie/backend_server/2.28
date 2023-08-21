@@ -1,0 +1,17 @@
+Looking in indexes: https://pypi.org/simple, https://pypi.ngc.nvidia.com
+Requirement already satisfied: requests in c:\users\administrator\appdata\local\programs\python\python310\lib\site-packages (2.26.0)
+Collecting urllib3<1.27,>=1.21.1 (from requests)
+  Obtaining dependency information for urllib3<1.27,>=1.21.1 from https://files.pythonhosted.org/packages/c5/05/c214b32d21c0b465506f95c4f28ccbcba15022e000b043b72b3df7728471/urllib3-1.26.16-py2.py3-none-any.whl.metadata
+  Downloading urllib3-1.26.16-py2.py3-none-any.whl.metadata (48 kB)
+     ---------------------------------------- 48.4/48.4 kB 2.4 MB/s eta 0:00:00
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\administrator\appdata\local\programs\python\python310\lib\site-packages (from requests) (2021.10.8)
+Requirement already satisfied: charset-normalizer~=2.0.0 in c:\users\administrator\appdata\local\programs\python\python310\lib\site-packages (from requests) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\administrator\appdata\local\programs\python\python310\lib\site-packages (from requests) (3.3)
+Downloading urllib3-1.26.16-py2.py3-none-any.whl (143 kB)
+   ---------------------------------------- 143.1/143.1 kB 8.3 MB/s eta 0:00:00
+Installing collected packages: urllib3
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.0.4
+    Uninstalling urllib3-2.0.4:
+      Successfully uninstalled urllib3-2.0.4
+Successfully installed urllib3-1.26.16
