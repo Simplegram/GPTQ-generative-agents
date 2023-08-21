@@ -19,7 +19,7 @@ You can follow the default guide, just make sure that ```OPENAI_API_BASE``` and 
 conda env config vars set OPENAI_API_BASE=http://0.0.0.0:5001/v1
 conda env config vars set OPENAI_API_KEY=dummy
 ```
-Restart your environment after setting environment variable
+Restart your Conda env after setting both environment variables
 
 # Generative Agents: Interactive Simulacra of Human Behavior
 
