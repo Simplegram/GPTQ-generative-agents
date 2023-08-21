@@ -2,6 +2,23 @@
 
 # Generative Agents: Interactive Simulacra of Human Behavior, powered by Oobabooga Text Generation WebUI with OpenAI extension 
 
+## The repo contains messy and buggy codes. I'm not in any way a capable Python code, I'm just a noob trying to "duct tape" the codes to be used with local GPTQ models. Any help fixing the bugs is very much appreciated.
+This generative agents repo uses [Oobabooga Text Generation WebUI](https://github.com/oobabooga/text-generation-webui) along with the built-in OpenAI extension.
+I used [TheBloke/upstage-llama-30b-instruct-2048-GPTQ](https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GPTQ) by TheBloke from HuggingFace, which from my personal testing and the Open LLM Leaderboard, the best instruction following model that I can run with an RTX 4090. I managed to run 10 hours (4 hours excluding sleeping time) of simulation time. 
+
+## Current Roadblock
+The code currently fails on running ```run_gpt_prompt_insight_and_guidance``` function in the file ```\generative_agents\reverie\backend_server\persona\prompt_template\run_gpt_prompt.py```.
+
+## Installation
+You can follow the default guide, just make sure that ```OPENAI_API_BASE``` and ```OPENAI_API_KEY``` are set directly in the Conda environment like below
+```
+conda env config vars set OPENAI_API_BASE=http://0.0.0.0:5001/v1
+conda env config vars set OPENAI_API_KEY=dummy
+```
+Restart your environment after setting environment variable
+
+# Generative Agents: Interactive Simulacra of Human Behavior
+
 <p align="center" width="100%">
 <img src="cover.png" alt="Smallville" style="width: 80%; min-width: 300px; display: block; margin: auto;">
 </p>
