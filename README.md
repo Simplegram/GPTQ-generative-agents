@@ -1,5 +1,3 @@
-# Files not uploaded yet! Check back later :)
-
 # Generative Agents: Interactive Simulacra of Human Behavior, powered by Oobabooga Text Generation WebUI with OpenAI extension 
 
 ## The repo contains messy and buggy codes. I'm not in any way a capable Python coder, I'm just a noob trying to "duct tape" the codes so it can be used with local GPTQ models. Any help fixing the bugs is very much appreciated.
