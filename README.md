@@ -1,4 +1,4 @@
-# File not uploaded yet!
+# Files not uploaded yet! Check back later :)
 
 # Generative Agents: Interactive Simulacra of Human Behavior, powered by Oobabooga Text Generation WebUI with OpenAI extension 
 
