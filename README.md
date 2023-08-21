@@ -3,7 +3,7 @@
 ## The repo contains messy and buggy codes. I'm not in any way a capable Python coder, I'm just a noob trying to "duct tape" the codes so it can be used with local GPTQ models. Any help fixing the bugs is very much appreciated. Feel free to make a new issue.
 ## Currently only works with [TheBloke/upstage-llama-30b-instruct-2048-GPTQ](https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GPTQ) (gptq-4bit-128g-actorder_True) since I only fitted the prompt template of the model.
 This generative agents repo uses [Oobabooga Text Generation WebUI](https://github.com/oobabooga/text-generation-webui) along with the built-in OpenAI extension.
-I used [TheBloke/upstage-llama-30b-instruct-2048-GPTQ](https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GPTQ) (gptq-4bit-128g-actorder_True) by TheBloke from HuggingFace, which from my personal testing and the Open LLM Leaderboard, the best GPTQ instruction following model that I can run with an RTX 4090. 
+I used [TheBloke/upstage-llama-30b-instruct-2048-GPTQ](https://huggingface.co/TheBloke/upstage-llama-30b-instruct-2048-GPTQ) (gptq-4bit-128g-actorder_True) by TheBloke from HuggingFace, which from my personal testing and the Open LLM Leaderboard, the best GPTQ instruction following model that I can run with an RTX 4090. You can find more about my GPTQ model testing and leadeboard on my website at [https://blog.hglooweb.com](https://blog.hglooweb.com)
 
 I managed to run 10 hours (4 hours excluding sleeping time) of simulation time. The simulation is provided with the name ```test```. Run backend and frontend, then head to the browser and go to ```http://localhost:8000/replay/test/1/``` to see the simulation.
 
