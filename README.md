@@ -35,6 +35,13 @@ def run_model():
     run_cmd("python server.py --extensions openai", environment=True)  # put your flags here!
 ```
 
+If your code looks different, don't worry! Just add ```--extensions openai``` after ``` python server.py``` or add ```openai``` only if you have other extensions running.
+```
+def run_model():
+    os.chdir("text-generation-webui")
+    run_cmd("python server.py --extensions ngrok elevenlabs_tts openai --xformers --sdp-attention", environment=True)  # put your flags here!
+```
+
 ### Follow the default generative agents installation guide
 You can follow the default guide now. Replacing your OpenAI key on Step 1 won't affect the OpenAI key that has been set in the Conda environment.
 
