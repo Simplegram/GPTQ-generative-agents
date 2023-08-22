@@ -35,7 +35,7 @@ def run_model():
     run_cmd("python server.py --extensions openai", environment=True)  # put your flags here!
 ```
 
-If your code looks different, don't worry! Just add ```--extensions openai``` after ``` python server.py``` or add ```openai``` only if you have other extensions running.
+If your code looks different, don't worry! Just add ```--extensions openai``` after ```python server.py``` or add ```openai``` only if you have other extensions running.
 ```
 def run_model():
     os.chdir("text-generation-webui")
