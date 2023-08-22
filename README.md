@@ -17,6 +17,7 @@ The code currently fails on running ```run_gpt_prompt_insight_and_guidance``` fu
 ```
 conda create --name gen_agent
 conda activate gen_agent
+conda install python=3.9.12
 ```
 
 ### Set base and key
