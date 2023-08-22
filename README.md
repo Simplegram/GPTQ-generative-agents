@@ -13,12 +13,16 @@ Most of the code changes are adding extra prompts to the special instruction par
 The code currently fails on running ```run_gpt_prompt_insight_and_guidance``` function in ```\generative_agents\reverie\backend_server\persona\prompt_template\run_gpt_prompt.py``` file.
 
 ## Installation
+### Set base and key
 You can follow the default guide, just make sure that ```OPENAI_API_BASE``` and ```OPENAI_API_KEY``` are set directly in the Conda environment like below
 ```
 conda env config vars set OPENAI_API_BASE=http://0.0.0.0:5001/v1
 conda env config vars set OPENAI_API_KEY=dummy
 ```
 Restart your Conda env after setting both environment variables
+
+### Start Oobabooga Text Generation WebUI with OpenAI extension
+Under ```def run_model():``` function, on ```run_cmd("python server.py")```, add ```--extensions openai``` to load the OpenAI extension.
 
 # Generative Agents: Interactive Simulacra of Human Behavior
 
