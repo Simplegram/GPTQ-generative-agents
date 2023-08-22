@@ -26,7 +26,11 @@ Make sure that ```OPENAI_API_BASE``` and ```OPENAI_API_KEY``` are set directly i
 conda env config vars set OPENAI_API_BASE=http://0.0.0.0:5001/v1
 conda env config vars set OPENAI_API_KEY=dummy
 ```
-Restart your Conda env after setting both environment variables
+Restart your Conda env after setting both environment variables with
+```
+conda deactivate
+conda activate gen_agent
+```
 
 ### Start Oobabooga Text Generation WebUI with OpenAI extension
 Under ```def run_model():``` function, on ```run_cmd("python server.py")```, add ```--extensions openai``` flag to load the OpenAI extension.
