@@ -13,6 +13,12 @@ Most of the code changes are adding extra prompts to the special instruction par
 The code currently fails on running ```run_gpt_prompt_insight_and_guidance``` function in ```\generative_agents\reverie\backend_server\persona\prompt_template\run_gpt_prompt.py``` file.
 
 ## Installation
+### Create and activate a Conda/Miniconda environment
+```
+conda create --name gen_agent
+conda activate gen_agent
+```
+
 ### Set base and key
 You can follow the default guide, just make sure that ```OPENAI_API_BASE``` and ```OPENAI_API_KEY``` are set directly in the Conda environment like below
 ```
