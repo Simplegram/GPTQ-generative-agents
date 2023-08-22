@@ -23,6 +23,11 @@ Restart your Conda env after setting both environment variables
 
 ### Start Oobabooga Text Generation WebUI with OpenAI extension
 Under ```def run_model():``` function, on ```run_cmd("python server.py")```, add ```--extensions openai``` to load the OpenAI extension.
+```
+def run_model():
+    os.chdir("text-generation-webui")
+    run_cmd("python server.py --extensions openai", environment=True)  # put your flags here!
+```
 
 # Generative Agents: Interactive Simulacra of Human Behavior
 
