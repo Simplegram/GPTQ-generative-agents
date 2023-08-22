@@ -20,7 +20,7 @@ conda activate gen_agent
 ```
 
 ### Set base and key
-You can follow the default guide, just make sure that ```OPENAI_API_BASE``` and ```OPENAI_API_KEY``` are set directly in the Conda environment like below
+Make sure that ```OPENAI_API_BASE``` and ```OPENAI_API_KEY``` are set directly in the Conda environment like below
 ```
 conda env config vars set OPENAI_API_BASE=http://0.0.0.0:5001/v1
 conda env config vars set OPENAI_API_KEY=dummy
@@ -34,6 +34,9 @@ def run_model():
     os.chdir("text-generation-webui")
     run_cmd("python server.py --extensions openai", environment=True)  # put your flags here!
 ```
+
+### Follow the default generative agents installation guide
+You can follow the default guide now. Replacing your OpenAI key on Step 1 won't affect the OpenAI key that has been set in the Conda environment.
 
 # Generative Agents: Interactive Simulacra of Human Behavior
 
